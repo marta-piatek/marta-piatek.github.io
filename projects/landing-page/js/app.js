@@ -18,6 +18,55 @@
  * 
 */
 
+const myNavigation = []
+const h2Elements = document.getElementsByTagName("h2")
+
+for (let i = 0; i < h2Elements.length; i++) {
+    myNavigation.push(h2Elements[i].innerText)
+}
+
+const navList = document.querySelector('#navbar__list');
+for (let i=0; i < myNavigation.length; i++) {
+    const anchor = document.createElement('a');
+    anchor.href = '#section' + (i+1);
+    anchor.innerText = myNavigation[i];
+
+    const section = document.createElement('li');
+    section.appendChild(anchor);
+    navList.appendChild(section);
+}
+
+// let active = document.querySelector('.active');
+
+// active.addEventListener('mouseenter', function( event ) {
+//     event.style.color = 'yellow';
+// });
+
+// active.addEventListener('mouseout', function( event ) {
+//     event.style.color = '';
+// });
+
+const section_highlighted = document.getElementsByClassName('active');
+for (let i = 0; i < section_highlighted.length; i++) {
+    let section = section_highlighted[i]
+
+    section.addEventListener('mouseover', function() {
+        section.className = 'active-highlighted'
+    });
+        
+    section.addEventListener('mouseout', function() {
+        section.className = 'active'  
+    });
+}  
+
+
+// const mouseEvent = document.querySelector('body');
+//     document.body.addEventListener('mouseover', function() {
+//         console.log('This section is being viewed');
+//         mouseEvent.setAttribute('style', 'color: red; font-size: 2em;');
+//     });
+    
+
 
 /**
  * End Global Variables
@@ -55,3 +104,24 @@
 // Set sections as active
 
 
+// for (let i = 1; i <= h2Elements.length; i++) {
+//     let section = document.getElementById(`section${i}`)
+
+//     section.addEventListener('mouseover', function( event ) {
+//         section.className = 'active_highlighted'
+//         // console.log(event)
+//         // event.target.style.color = 'purple';
+//         // setTimeout(function() {
+//         //     event.target.style.color = '';
+//         // }, 500);
+//     }, false);
+    
+//     section.addEventListener('mouseout', function( event ) {
+//         section.className = 'active'
+//         // console.log(event)
+//         // event.target.style.color = 'purple';
+//         // setTimeout(function() {
+//         //     event.target.style.color = '';
+//         // }, 500);
+//     }, false);
+// }

@@ -121,7 +121,7 @@ grid-template-areas:
 }
 
 /*Medium screen*/
- @media(min-width:600px) and (max-width: 1100px) {
+ @media(min-width:601px) and (max-width: 1100px) {
     .container {
         font-size: 18px;
         font-family: 'Times New Roman', Times, serif ;
@@ -176,7 +176,7 @@ grid-template-areas:
  }
 
  /*Large screen*/
-@media(min-width:1001px) {
+@media(min-width:1101px) {
     .container {
         font-size: 20px;
         font-family: 'Merriweather', serif;
@@ -190,10 +190,6 @@ grid-template-areas:
         padding-bottom: 3em;
         margin-left: 10em;
         margin-right: 10em;
-    }
-
-    .navbar__menu {
-        text-align: center;
     }
 
     .page__footer p {
@@ -291,7 +287,7 @@ section {
 /* Navigation Styles*/
 .navbar__menu ul {
     margin: 0;
-    text-align: right;
+    text-align: center;
 }
 
 .navbar__menu {
@@ -336,21 +332,33 @@ section {
 }
 
 .form-subscribe-text {
-    color: black; 
+    color: grey; 
     font-weight: bold;
 }
 
 .form-subscribe-button {
     font-weight: bold;
     background-color: grey;
-    color: black;
-    border: 3px solid black;
+    color: white;
+    border: 3px solid grey;
 }
 
+/* Social icons styles*/
 .social {
     text-align: center;
     padding-top: 2em;
     margin-top: 5em;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding-bottom: 1em;
+    background-color: grey;
+}
+
+
+
+.image-link {
+    text-decoration: none;
 }
 
 /* ---- Theme Rules ---- */
@@ -437,17 +445,27 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
+section.active {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.your-active-class .landing__container::before {
+section.active-highlighted {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(0deg, rgba(255, 0, 0, 0.6) 0%, rgba(255, 0, 0, 0) 100%);
+}
+
+/* section.active {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(0deg, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 100%);
+} */
+
+section.active .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.your-active-class .landing__container::after {
+section.active .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }

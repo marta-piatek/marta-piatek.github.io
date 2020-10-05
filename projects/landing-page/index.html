@@ -16,11 +16,12 @@
     <header class="page__header">
       <nav class="navbar__menu">
         <!-- Navigation starts as empty UL that will be populated with JS -->
-        <ul id="navbar__list"></ul>
-          <li><a href="#section1">MY HTML</a></li>
+        <ul id="navbar__list">
+          <!-- <li><a href="#section1">MY HTML</a></li>
           <li><a href="#section2">MY CSS</a></li>
           <li><a href="#section3">MY JAVA SCRIPT</a></li>
-          <li><a href="#section4">MY UDACITY</a></li>
+          <li><a href="#section4">MY UDACITY</a></li> -->
+        </ul>
       </nav>
     </header>
     <main class="main_content">
@@ -36,7 +37,7 @@
       a data attribute that will populate the li node.
       Adding more sections will automatically populate nav.
       The first section is set to active class by default -->
-      <section id="section1" data-nav="Section 1" class="your-active-class">
+      <section id="section1" data-nav="Section 1" class="active">
         <div class="landing__container">
           <h2>MY HTML</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
@@ -44,7 +45,7 @@
           <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
         </div>
       </section>
-      <section id="section2" data-nav="Section 2">
+      <section id="section2" data-nav="Section 2" class="active">
         <div class="landing__container">
           <h2>MY CSS </h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
@@ -52,7 +53,7 @@
           <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
         </div>
       </section>
-      <section id="section3" data-nav="Section 3">
+      <section id="section3" data-nav="Section 3" class="active">
         <div class="landing__container">
           <h2>MY JAVA SCRIPT</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
@@ -60,7 +61,7 @@
           <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
         </div>
       </section>
-      <section id="section4" data-nav="Section 4">
+      <section id="section4" data-nav="Section 4" class="active">
         <div class="landing__container">
           <h2>MY UDACITY</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
@@ -79,18 +80,19 @@
                 <input type="email" name="email" id="email" required>
             </div>
             <div>
-                <input class="form-subscribe-button" type="submit" value="Subscribe to my YouTube!">
+                <input class="form-subscribe-button" type="submit" value="Subscribe to my YouTube">
             </div>
         </form>
       </div>
-      <div class= "social"><h2>Where you can find me.</h2>
-        <a href="https://facebook.com/">
+      <div class= "social">
+        <h3>Where you can find me.</h3>
+        <a href="https://facebook.com/" class="image-link">
           <img class="social-icon" src="../../images/FB.jpg" alt="Facebook icon">
         </a>
-        <a href="https://twitter.com/">
+        <a href="https://twitter.com/" class="image-link">
           <img class="social-icon" src="../../images/twitter.jpg" alt="Twitter icon">
         </a>
-        <a  href="https://linkedin.com/">
+        <a href="https://linkedin.com/" class="image-link">
           <img class="social-icon" src="../../images/Linkedin.jpg" alt="LinkedIn icon">
         </a>
       </div>
