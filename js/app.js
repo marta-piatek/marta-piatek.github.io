@@ -14,11 +14,44 @@
 */
 
 /**
- * Define Global  variables
+ * Define Global variables
  *
  */
 const myNavigation = []
 const h2Elements = document.getElementsByTagName('h2');
+const navList = document.querySelector('#navbar__list');
+let collapse = document.getElementsByClassName('collapsible');
+const section_highlighted = document.getElementsByClassName('active');
+const myButton = document.getElementById('topButton');
+
+/**
+ * End Global Variables
+ * Start Helper Functions
+ *
+*/
+
+/**
+ * @description Sets the back-to-top button's display style to 'block' so that the button is visible when the user scrolls below the fold of the page.
+ */
+function scrollFunction() {
+    myButton.style.display = (document.documentElement.scrollTop > 20) ? 'block' : 'none';
+}
+
+/**
+ * @description Sets the scrollTop property if the root element so that the page is scrolled back to the top.
+ * PS: eslint has been disabled for the function definition because it is not used in this file. The function
+ * is called in index.html
+ */
+// eslint-disable-next-line no-unused-vars
+function buttonFunction() {
+    document.documentElement.scrollTop = 0;
+}
+
+/**
+ * End Helper Functions
+ * Begin Events
+ *
+*/
 
 // Add the titles of the sections to the myNavigation array
 for (let i = 0; i < h2Elements.length; i++) {
@@ -26,7 +59,6 @@ for (let i = 0; i < h2Elements.length; i++) {
 }
 
 // Use the myNavigation array to build the navigation bar using the title of the sections
-const navList = document.querySelector('#navbar__list');
 for (let i=0; i < myNavigation.length; i++) {
     const anchor = document.createElement('a');
     anchor.innerText = myNavigation[i];
@@ -54,7 +86,6 @@ for (let i=0; i < myNavigation.length; i++) {
 }
 
 // Set up an event listener to expand or collapse a section when clicked.
-let collapse = document.getElementsByClassName('collapsible');
 for (let i = 0; i < collapse.length; i++) {
     collapse[i].addEventListener('click', function() {
         this.classList.toggle('activeSection');
@@ -65,7 +96,6 @@ for (let i = 0; i < collapse.length; i++) {
 }
 
 // Set up event listeners to highlight sections and corresponding navigation items when the user hovers over the section.
-const section_highlighted = document.getElementsByClassName('active');
 for (let i = 0; i < section_highlighted.length; i++) {
     let section = section_highlighted[i];
     const navItem = document.getElementById(`li__section${i+1}`);
@@ -81,59 +111,9 @@ for (let i = 0; i < section_highlighted.length; i++) {
     });
 }
 
-const myButton = document.getElementById('topButton');
-
 // Set up function to be called when user starts scrolling
-window.onscroll = scrollFunction();
+window.onscroll = scrollFunction;
 
 /**
- * @description Sets the back-to-top button's display style to 'block' so that the button is visible when the user scrolls below the fold of the page.
- */
-function scrollFunction() {
-    myButton.style.display = (document.documentElement.scrollTop > 20) ? 'block' : 'none';
-}
-
-/**
- * @description Sets the scrollTop property if the root element so that the page is scrolled back to the top.
- * PS: eslint has been disabled for the function definition because it is not used in this file. The function
- * is called in index.html
- */
-// eslint-disable-next-line no-unused-vars
-function buttonFunction() {
-    document.documentElement.scrollTop = 0;
-}
-
-/**
- * End Global Variables
- * Start Helper Functions
- *
+ * End Events
 */
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- *
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- *
-*/
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active
