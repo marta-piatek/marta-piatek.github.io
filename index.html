@@ -1,107 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-  <div class="container">
-  <!-- HTML Follows BEM naming conventions
-  IDs are only used for sections to connect menu achors to sections -->
-    <header class="page__header">
-      <nav class="navbar__menu">
-        <!-- Navigation starts as empty UL that will be populated with JS -->
-        <ul id="navbar__list"></ul>
-      </nav>
-    </header>
-    <main class="main_content">
-      <header class="main__hero">
-        <h1>Marta's Active Page</h1>
+  <!--Meta data of the page-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulating the DOM</title>
+      <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <!--Content of the page starts here-->
+  <body>
+    <div class="container">
+    <!--Active navigation that connects to sections of the page-->
+      <header class="page_header">
+        <nav class="navbar_menu">
+          <ul id="navbar_list"></ul>
+        </nav>
       </header>
-      <button onclick = "buttonFunction()" id = "topButton">Back to top</button>
-      <div class="image_container">
-        <img class= "image_box" src="images/mountains.jpg" alt="Mountains and a lake">
-        <img class= "image_box" src="images/fall.jpg" alt= "Fall">
-        <img class= "image_box" src="images/forest.jpg" alt="Forest">
-      </div>
-      <!-- Each Section has an ID (used for the anchor) and
-      a data attribute that will populate the li node.
-      Adding more sections will automatically populate nav.
-      The first section is set to active class by default -->
-      <section id="section1" data-nav="Section 1" class="active">
-        <div class="landing__container">
-          <h2 class = "collapsible">HTML</h2>
-          <p class = "sectionContent">Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
-
-          <p class = "sectionContent">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      <main class="main_content">
+        <!--Page title-->
+        <header class="main_hero">
+          <h1>Marta's Active Page</h1>
+        </header>
+        <!--Back to top button that shows up when a user starts scrolling down the page and when clicked it scrolls back up to the top of the page (above the page fold.)-->
+        <button onclick = "buttonFunction()" id = "topButton">Back to top</button>
+        <!--Image section that contains three main images on the page-->
+        <div class="image_container">
+          <img class= "image_box" src="images/mountains.jpg" alt="Mountains and a lake">
+          <img class= "image_box" src="images/fall.jpg" alt="Fall forest with colorful trees">
+          <img class= "image_box" src="images/forest.jpg" alt="Green forest with bright green trees and grass">
         </div>
-      </section>
-      <section id="section2" data-nav="Section 2" class="active">
-        <div class="landing__container">
-          <h2 class = "collapsible">CSS </h2>
-          <p class = "sectionContent">CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting. </p>
-
-          <p class = "sectionContent">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-        </div>
-      </section>
-      <section id="section3" data-nav="Section 3" class="active">
-        <div class="landing__container">
-          <h2 class = "collapsible">JAVA SCRIPT</h2>
-          <p class = "sectionContent">JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[7] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.[8] JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it. </p>
-
-          <p class = "sectionContent">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-        </div>
-      </section>
-      <section id="section4" data-nav="Section 4" class="active">
-        <div class="landing__container">
-          <h2 class = "collapsible">UDACITY</h2>
-          <p class = "sectionContent">In June 2014, Udacity and AT&T announced the "Nanodegree" program, designed to teach programming skills needed to qualify for an entry-level IT position at AT&T. The coursework is said to take less than a year to complete, and cost about US$200/month. AT&T said it will offer paid internships to some graduates of the program.[39][40]“We can’t turn you into a Nobel laureate,” Mr. Thrun said to a learner. “But what we can do is something like upskilling — you’re a smart person, but the skills you have are inadequate for the current job market, or don’t let you get the job you aspire to have. We can help you get those skills.”[41] A cybersecurity nanodegree was announced at the RSA Conference in April 2018.[42]</p>
-
-          <p class = "sectionContent">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-        </div>
-      </section>
-      <div class="form">
-        <form action="" method="get" class="form-subscribe">
+        <!-- Active sections that populate the li node and adding more sections automatically populate navigation-->
+        <section id="section1" data-nav="Section 1" class="active">
+          <div class="landing_container">
+            <h2 class = "collapsible">HTML</h2>
+            <p class = "section-content">Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+            <p class = "section-content">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+          </div>
+        </section>
+        <section id="section2" data-nav="Section 2" class="active">
+          <div class="landing_container">
+            <h2 class = "collapsible">CSS</h2>
+            <p class = "section-content">CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting. </p>
+            <p class = "section-content">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+          </div>
+        </section>
+        <section id="section3" data-nav="Section 3" class="active">
+          <div class="landing_container">
+            <h2 class = "collapsible">JAVA SCRIPT</h2>
+            <p class = "section-content">JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[7] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.[8] JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it. </p>
+            <p class = "section-content">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+          </div>
+        </section>
+        <section id="section4" data-nav="Section 4" class="active">
+          <div class="landing_container">
+            <h2 class = "collapsible">UDACITY</h2>
+            <p class = "section-content">In June 2014, Udacity and ATT announced the "Nanodegree" program, designed to teach programming skills needed to qualify for an entry-level IT position at ATT. The coursework is said to take less than a year to complete, and cost. It said it will offer paid internships to some graduates of the program.[39][40]“We can’t turn you into a Nobel laureate,” Mr. Thrun said to a learner. “But what we can do is something like upskilling — you’re a smart person, but the skills you have are inadequate for the current job market, or don’t let you get the job you aspire to have. We can help you get those skills.”[41] A cybersecurity nanodegree was announced at the RSA Conference in April 2018.[42]</p>
+            <p class = "section-content">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+          </div>
+        </section>
+        <!--Subscribe form-->
+        <div class="form">
+          <form action="" method="get" class="form-subscribe">
             <div>
-                <label class="form-subscribe-text" for="name">Enter your name: </label>
-                <input type="text" name="name" id="name" required>
+              <label class="form-subscribe-text" for="name">Enter your name: </label>
+              <input type="text" name="name" id="name" required>
             </div>
             <div>
-                <label class="form-subscribe-text" for="email">Enter your email: </label>
-                <input type="email" name="email" id="email" required>
+              <label class="form-subscribe-text" for="email">Enter your email: </label>
+              <input type="email" name="email" id="email" required>
             </div>
             <div>
               <a href= "https://youtube.com">
                 <input class="form-subscribe-button" type="submit" value="Subscribe to my YouTube">
               </a>
             </div>
-        </form>
-      </div>
-      <div class= "social">
-        <h3>Where you can find me</h3>
-        <a href="https://facebook.com/" class="image-link">
-          <img class="social-icon" src="../../images/FB.jpg" alt="Facebook icon">
-        </a>
-        <a href="https://twitter.com/" class="image-link">
-          <img class="social-icon" src="../../images/twitter.jpg" alt="Twitter icon">
-        </a>
-        <a href="https://linkedin.com/" class="image-link">
-          <img class="social-icon" src="../../images/Linkedin.jpg" alt="LinkedIn icon">
-        </a>
-      </div>
-    </main>
-    <footer class="page__footer">
-      <p>&copy Udacity</p>
-      <p>Home</p>
-      <p>Contact</p>
-    </footer>
-  </div>
-</body>
+          </form>
+        </div>
+        <!--Social media section with icons and hyperlinks-->
+        <div class= "social">
+          <h3>Where you can find me</h3>
+          <a href="https://facebook.com/" class="image-link">
+            <img class="social-icon" src="../../images/FB.jpg" alt="Facebook icon">
+          </a>
+          <a href="https://twitter.com/" class="image-link">
+            <img class="social-icon" src="../../images/twitter.jpg" alt="Twitter icon">
+          </a>
+          <a href="https://linkedin.com/" class="image-link">
+            <img class="social-icon" src="../../images/Linkedin.jpg" alt="LinkedIn icon">
+          </a>
+        </div>
+      </main>
+      <!--Footer with three tabs linking to external websites-->
+      <footer class="page_footer">
+        <a href = "https://www.udacity.com/school-of-programming">
+          <p>&copy Udacity</p></a>
+        <a href = "https://www.udacity.com/career-services/home">
+          <p>Home</p></a>
+        <a href = "https://www.udacity.com/us">
+          <p>Contact</p></a>
+      </footer>
+    </div>
+  </body>
 </html>
 <!-- Link to java script -->
 <script src="js/app.js"></script>

@@ -19,7 +19,7 @@
  */
 const myNavigation = []
 const h2Elements = document.getElementsByTagName('h2');
-const navList = document.querySelector('#navbar__list');
+const navList = document.querySelector('#navbar_list');
 let collapse = document.getElementsByClassName('collapsible');
 const section_highlighted = document.getElementsByClassName('active');
 const myButton = document.getElementById('topButton');
@@ -64,14 +64,14 @@ for (let i=0; i < myNavigation.length; i++) {
     anchor.innerText = myNavigation[i];
 
     const section = document.createElement('li');
-    section.id = `li__section${i+1}`;
+    section.id = `li_section${i+1}`;
     section.appendChild(anchor);
     navList.appendChild(section);
 
     // Scroll to selected section from the Navigation Bar when clicked
     anchor.addEventListener('click', () => {
         const elementPosition = h2Elements[i].getBoundingClientRect().top;
-        const navSize = document.getElementById('navbar__list').clientHeight;
+        const navSize = document.getElementById('navbar_list').clientHeight;
 
         window.scrollBy(0, elementPosition - navSize);
     });
@@ -79,7 +79,7 @@ for (let i=0; i < myNavigation.length; i++) {
     // Scroll to selected section from the Navigation Bar when clicked
     section.addEventListener('click', () => {
         const elementPosition = h2Elements[i].getBoundingClientRect().top;
-        const navSize = document.getElementById('navbar__list').clientHeight;
+        const navSize = document.getElementById('navbar_list').clientHeight;
 
         window.scrollBy(0, elementPosition - navSize);
     });
@@ -88,7 +88,7 @@ for (let i=0; i < myNavigation.length; i++) {
 // Set up an event listener to expand or collapse a section when clicked.
 for (let i = 0; i < collapse.length; i++) {
     collapse[i].addEventListener('click', function() {
-        this.classList.toggle('activeSection');
+        this.classList.toggle('active-section');
         let text = this.nextElementSibling;
 
         text.style.display = (text.style.display === 'block') ? 'none' : 'block';
@@ -98,7 +98,7 @@ for (let i = 0; i < collapse.length; i++) {
 // Set up event listeners to highlight sections and corresponding navigation items when the user hovers over the section.
 for (let i = 0; i < section_highlighted.length; i++) {
     let section = section_highlighted[i];
-    const navItem = document.getElementById(`li__section${i+1}`);
+    const navItem = document.getElementById(`li_section${i+1}`);
 
     section.addEventListener('mouseover', () => {
         navItem.className = 'active-highlighted';

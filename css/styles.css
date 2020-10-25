@@ -1,20 +1,20 @@
-/* ---- Device Responsiveness Rules ---- */
+/* Device Responsiveness Rules */
 
 /*Mobile screen styles*/
 @media (max-width: 600px) {
     .container {
         font-size: 15px;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Times New Roman", Times, serif;
     }
 
-    .navbar__menu li {
+    .navbar_menu li {
         display: inline-block;
-        font-size: 13px;
+        font-size: 10px;
         font-weight: bold;
         padding: 4em 2em;
     }
 
-    .page__footer p {
+    .page_footer p {
         display: inline-block;
         font-size: medium;
         font-weight: bold;
@@ -22,8 +22,8 @@
     }
 
     h1 {
-      font-size: 3em;
-      padding-bottom: 1em;
+        font-size: 3em;
+        padding-bottom: 1em;
     }
 
     .image_container {
@@ -59,21 +59,22 @@
     }
 }
 
+
 /*Medium screen styles*/
 @media (min-width: 601px) and (max-width: 1100px) {
     .container {
         font-size: 18px;
-        font-family: 'Times New Roman', Times, serif ;
+        font-family: "Times New Roman", Times, serif ;
     }
 
-    .navbar__menu li {
+    .navbar_menu li {
         display: inline-block;
         font-size: medium;
         font-weight: bold;
         padding: 3.1em;
     }
 
-    .page__footer p {
+    .page_footer p {
         display: inline-block;
         font-size: large;
         font-weight: bold;
@@ -85,7 +86,7 @@
     }
 
     .image_container {
-        display: flex; 
+        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -116,14 +117,15 @@
     }
 }
 
+
  /*Large screen styles*/
 @media (min-width: 1101px) {
     .container {
         font-size: 20px;
-        font-family: 'Merriweather', serif;
+        font-family: "Merriweather", serif;
     }
 
-    .navbar__menu li {
+    .navbar_menu li {
         display: inline-block;
         font-size: 18px;
         font-weight: bold;
@@ -132,20 +134,20 @@
         margin-left: 7em;
     }
 
-    .page__footer p {
+    .page_footer p {
         display: inline-block;
         font-size: 18px;
         font-weight: bold;
-        padding: 3em
+        padding: 3em;
     }
 
     h1 {
-      font-size: 4em;
-      text-align: center;
+        font-size: 4em;
+        text-align: center;
     }
 
     .image_container {
-        display: flex; 
+        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -178,31 +180,32 @@
     ul {
         display: flex;
     }
-}    
-
-body {
-    background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
-    margin: 0;
-    font-family: 'Merriweather', serif;
 }
 
-/* Typeography General*/
-h1 {
-    font-family: 'Fira Sans', sans-serif;
-    color: grey;
-}
-
-@media only screen and (min-width: 35em){
+@media only screen and (min-width: 35em) {
     h1 {
         margin: 2em 4rem 1em;
         position: relative;
     }
 }
 
+
+/* Typeography General Styles*/
+body {
+    background: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: "Merriweather", serif;
+}
+
+h1 {
+    font-family: "Fira Sans", sans-serif;
+    color: grey;
+}
+
 h2 {
     border-bottom: 1px solid white;
-    font-family: 'Oxygen', Sans-Serif;
+    font-family: "Oxygen", Sans-Serif;
     color: white;
 }
 
@@ -211,7 +214,11 @@ p {
     color: white;
 }
 
-/* ---- Layout Rules ---- */
+a {
+    color: white;
+}
+
+/* Layout Rules */
 main {
     margin: 10vh 1em 10vh;
     padding-top: 1em;
@@ -219,39 +226,28 @@ main {
 
 section {
     position: relative;
-   
+
 }
 
-/* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-.navbar__menu ul {
+.navbar_menu ul {
     margin: 0;
 }
 
-.navbar__menu {
+.navbar_menu {
     background-color: black;
-    /* position: fixed; 
-    top: 0;
-    transition: top 0.5s ease-in-out; */
 }
 
-/* .navbar__menu.hide {
-    top: -120px;
- }  */
-
-/* .navbar__menu .menu__link {
-    display: inline-block;
-} */
-
-.navbar__menu .menu__link:hover {
+.navbar_menu .menu_link:hover {
     background: #333;
     color: grey;
     transition: ease 0.3s all;
 }
 
+
 /* Header Styles */
-.page__header {
+.page_header {
     background: #fff;
     position: fixed;
     top: 0;
@@ -259,29 +255,31 @@ section {
     z-index: 5;
 }
 
-/* Back to top button style */
 
+/* Back to top button style */
 #topButton {
-background-color: white;
-color: black;
-font-size: 16px;
-border-radius: 5px;
-padding: 10px;
-position: fixed;
-bottom: 20px;
-right: 20px;
-z-index: 6;
-display: none;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 6;
+    display: none;
 }
 
+
 /* Footer Styles */
-.page__footer {
+.page_footer {
     background: #000;
 }
 
-.page__footer p{
-    color: grey;
+.page_footer p {
+    color: white;
 }
+
 
 /* Subscribe form styles*/
 .form {
@@ -292,7 +290,7 @@ display: none;
 }
 
 .form-subscribe-text {
-    color: grey; 
+    color: grey;
     font-weight: bold;
 }
 
@@ -302,6 +300,7 @@ display: none;
     color: white;
     border: 3px solid grey;
 }
+
 
 /* Social icons styles*/
 .social {
@@ -315,40 +314,40 @@ display: none;
     background-color: grey;
 }
 
-
-
 .image-link {
     text-decoration: none;
 }
 
-/* ---- Theme Rules ---- */
+
+/* Theme Rules */
 /* Landing Container Styles */
-.landing__container {
+.landing_container {
     padding: 1em;
     text-align: left;
 }
 
-@media only screen and (min-width: 35em){
-    .landing__container {
+@media only screen and (min-width: 35em) {
+    .landing_container {
         max-width: 50em;
         padding: 4em;
     }
 }
 
-section:nth-of-type(even) .landing__container {
+section:nth-of-type(even) .landing_container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right; 
+    text-align: right;
 }
 
+
 /* Background Circles */
-/* Note that background circles are created with psuedo elements before and after */
+/* Background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
-section:nth-of-type(odd) .landing__container::before {
-    content: '';
+section:nth-of-type(odd) .landing_container::before {
+    content: "";
     background: rgba(255, 255, 255, 0.187);
     position: absolute;
-    z-index: -5;
+    z-index: 10;
     width: 20vh;
     height: 20vh;
     border-radius: 50%;
@@ -356,14 +355,14 @@ section:nth-of-type(odd) .landing__container::before {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(even) .landing__container::before {
-    content: '';
+section:nth-of-type(even) .landing_container::before {
+    content: "";
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     top: 3em;
     right: 3em;
-    z-index: -5;
+    z-index: 10;
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
@@ -371,14 +370,14 @@ section:nth-of-type(even) .landing__container::before {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(3n) .landing__container::after {
-    content: '';
+section:nth-of-type(3n) .landing_container::after {
+    content: "";
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     right: 0;
     bottom: 0;
-    z-index: -5;
+    z-index: 10;
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
@@ -386,14 +385,14 @@ section:nth-of-type(3n) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(3n + 1) .landing__container::after {
-    content: '';
+section:nth-of-type(3n + 1) .landing_container::after {
+    content: "";
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     right: 20vw;
     bottom: -5em;
-    z-index: -5;
+    z-index: 10;
     width: 15vh;
     height: 15vh;
     border-radius: 50%;
@@ -404,7 +403,6 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.active {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
@@ -420,46 +418,43 @@ li.active-highlighted {
     background: linear-gradient(0deg, rgba(255, 0, 0, 0.6) 0%, rgba(255, 0, 0, 0) 100%);
 }
 
-/* section.active {
-    background: rgb(255, 0, 0);
-    background: linear-gradient(0deg, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 100%);
-} */
-
-section.active .landing__container::before {
+section.active .landing_container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.active .landing__container::after {
+section.active .landing_container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
+
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
 	from {
-		transform: rotate(0deg)
+	    transform: rotate(0deg)
 		           translate(-1em)
 		           rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(-1em) 
+		           translate(-1em)
 		           rotate(-360deg);
 	}
 }
 
-/* Collapsible sections*/
-.collapsible:hover, .activeSection {
+
+/* Collapsible section functionality and style */
+.collapsible:hover, .active-section {
     background-color: grey;
     padding: 10px;
-  }
+}
 
 .collapsible {
     cursor: pointer;
 }
 
-.sectionContent {
+.section-content {
     display: none;
     overflow: hidden;
 }
